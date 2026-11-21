@@ -9,17 +9,17 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'python3 app.py'
+                bat 'python app.py'
             }
         }
         stage('Test') {
             steps {
-                sh 'python3 test_app.py'
+                bat 'python test_app.py'
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploy panniten! 🎉'
+                echo 'Deploy panniten!'
             }
         }
     }
